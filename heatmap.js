@@ -51,4 +51,18 @@ monthGroups
   .attr("y", 0)
   .attr("width", 50)
   .attr("height", 150)
-  .style("fill", (d, i) => { return colorScale(d) })  
+  .style("fill", (d, i) => { return colorScale(d) })
+
+monthGroups
+  .append("circle")
+  .attr("cx", 25)
+  .attr("cy", 75)
+  .attr("r", 15)
+
+monthGroups
+  .append("text")
+  .attr("class", "temp")
+  .attr("x", 25)
+  .attr("y", 77)
+  .text((d, i) => { return d })
+  .style("fill", (d, i) => { return colorScale(d) })
