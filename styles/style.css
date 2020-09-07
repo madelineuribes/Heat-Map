@@ -62,16 +62,30 @@ text.temp {
   dominant-baseline: middle;
   font-size: 18;
   font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 circle {
   fill: var(--text-color);
-
+  opacity: 0;
 }
 
 path {
   stroke: var(--text-color);
   stroke-width: 4px;
   fill: none;
+  transition: opacity 0.5s;
+}
+
+g.data-point:hover circle {
+  opacity: 1;
+}
+
+g.data-point:hover text.temp {
+  opacity: 1;
+}
+
+g.data-point:hover path {
   opacity: 0;
 }
